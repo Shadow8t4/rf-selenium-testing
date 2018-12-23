@@ -5,6 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Robot Framework: Current File (Integrated Terminal)",
+            "type": "python",
+            "request": "launch",
+            "program":"e:\\Documents\\git\\rf-selenium-testing\\rf_debugger.py",
+            "console": "integratedTerminal",
+            "args":[
+                "${file}"
+            ]
+        },
+        {
             "name": "Python: Current File (Integrated Terminal)",
             "type": "python",
             "request": "launch",
