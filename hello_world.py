@@ -1,23 +1,22 @@
 from selenium import webdriver
 import time
 
-print('hello, world!')
-print('commit test.')
+class hello_world:
 
-browser=webdriver.Firefox()
+    def main(self):
+        print('hello, world!')
+        print('commit test.')
 
-browser.get("http://testing-ground.scraping.pro/login")
+        browser=webdriver.Firefox()
+        browser.get("http://testing-ground.scraping.pro/login")
 
-user = browser.find_element_by_id("usr")
+        user = browser.find_element_by_id("usr")
+        user.send_keys("admin")
 
-user.send_keys("admin")
+        pwd = browser.find_element_by_id("pwd")
+        pwd.send_keys("12345")
 
-pwd = browser.find_element_by_id("pwd")
-
-pwd.send_keys("12345")
-
-browser.find_element_by_xpath("//input[@value='Login']").click()
-
-time.sleep(5)
-
-browser.quit()
+        browser.find_element_by_xpath("//input[@value='Login']").click()
+        
+        time.sleep(5)
+        browser.quit()

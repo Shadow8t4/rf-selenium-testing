@@ -2,6 +2,7 @@
 Documentation    Example using the space separated plain text format.
 Library          OperatingSystem
 Library          Selenium2Library
+Library          ./hello_world.py
 
 *** Variables ***
 ${MESSAGE}       Hello, world!
@@ -18,6 +19,9 @@ Another Test
 Browser Test
     Open Browser    https://google.com  browser=firefox
     Close Browser
+
+Second Browser Test
+    Main
 
 *** Keywords ***
 My Keyword
