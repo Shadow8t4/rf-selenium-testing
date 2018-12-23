@@ -6,7 +6,17 @@ print('commit test.')
 
 browser=webdriver.Firefox()
 
-browser.get("https://google.com")
+browser.get("http://testing-ground.scraping.pro/login")
+
+user = browser.find_element_by_id("usr")
+
+user.send_keys("admin")
+
+pwd = browser.find_element_by_id("pwd")
+
+pwd.send_keys("12345")
+
+browser.find_element_by_xpath("//input[@value='Login']").click()
 
 time.sleep(5)
 
