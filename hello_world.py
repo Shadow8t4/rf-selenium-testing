@@ -20,3 +20,6 @@ class hello_world:
         
         time.sleep(5)
         browser.quit()
+
+test = hello_world()
+test.main()
