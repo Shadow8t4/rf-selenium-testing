@@ -1,7 +1,9 @@
 from subprocess import call
-import sys
+from os import getcwd
+from sys import argv
 
 def main():
-    call(["robot", str(sys.argv[1])])
+    call('{0}/.pyenv/bin/python -m robot {1}'.format(getcwd(), str(argv[1])).split())
+    return 0
 
 main()
