@@ -17,7 +17,7 @@ Another Test
     Should Be Equal     ${MESSAGE}  Hello, world!
 
 Browser Test
-    Open Browser        https://google.com  browser=firefox
+    Open Browser        https://google.com  browser=chrome
     Close Browser
 
 Second Browser Test
@@ -32,7 +32,7 @@ My Keyword
     Directory Should Exist  ${path}
 
 Robot Browser
-    Open Browser            http://testing-ground.scraping.pro/login    browser=firefox
+    Open Browser            http://testing-ground.scraping.pro/login    browser=chrome
     Press Keys              usr     admin
     Press Keys              pwd     12345
     Click Element           //input[@value='Login']

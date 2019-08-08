@@ -5,7 +5,7 @@ def main():
     print('hello, world!')
     print('commit test.')
 
-    browser=webdriver.Firefox()
+    browser=webdriver.Chrome()
     browser.get("http://testing-ground.scraping.pro/login")
 
     user = browser.find_element_by_id("usr")
