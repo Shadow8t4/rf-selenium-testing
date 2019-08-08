@@ -10,7 +10,7 @@ ${MESSAGE}       Hello, world!
 *** Test Cases ***
 My Test
     [Documentation]     Example test
-    Log                 ${MESSAGE}
+    Log to console      ${MESSAGE}
     My Keyword          ./tmp
 
 Another Test
@@ -23,7 +23,18 @@ Browser Test
 Second Browser Test
     Main
 
+Third Browser Test
+    Robot Browser
+
 *** Keywords ***
 My Keyword
     [Arguments]             ${path}
     Directory Should Exist  ${path}
+
+Robot Browser
+    Open Browser            http://testing-ground.scraping.pro/login    browser=firefox
+    Press Keys              usr     admin
+    Press Keys              pwd     12345
+    Click Element           //input[@value='Login']
+    Sleep                   5
+    Close Browser
