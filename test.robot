@@ -9,15 +9,15 @@ ${MESSAGE}       Hello, world!
 
 *** Test Cases ***
 My Test
-    [Documentation]    Example test
-    Log    ${MESSAGE}
-    My Keyword    ./tmp
+    [Documentation]     Example test
+    Log                 ${MESSAGE}
+    My Keyword          ./tmp
 
 Another Test
-    Should Be Equal    ${MESSAGE}    Hello, world!
+    Should Be Equal     ${MESSAGE}  Hello, world!
 
 Browser Test
-    Open Browser    https://google.com  browser=firefox
+    Open Browser        https://google.com  browser=firefox
     Close Browser
 
 Second Browser Test
@@ -25,5 +25,5 @@ Second Browser Test
 
 *** Keywords ***
 My Keyword
-    [Arguments]    ${path}
-    Directory Should Exist    ${path}
+    [Arguments]             ${path}
+    Directory Should Exist  ${path}
