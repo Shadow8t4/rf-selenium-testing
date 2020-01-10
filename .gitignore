@@ -1,10 +1,11 @@
 __pycache__/
-*.pyc
-report/
-out/
-.vscode
-.pyenv
-*.log
+**.pyc
+Pipfile.lock
+.idea/
+.vscode/
+.credentials
+.DS_Store
+output/
 **/log.html
 **/output.xml
 **/report.html

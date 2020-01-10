@@ -1,23 +1,31 @@
 from selenium import webdriver
+from selenium.webdriver.support import ui
 import time
 
-def main():
-    print('hello, world!')
-    print('commit test.')
 
-    browser=webdriver.Chrome()
-    browser.get("http://testing-ground.scraping.pro/login")
+def python_selenium_test():
+    print('Hello, world!')
 
-    user = browser.find_element_by_id("usr")
-    user.send_keys("admin")
+    browser = webdriver.Chrome()
+    wait = ui.WebDriverWait(browser, 5)
+    browser.get("https://www.phptravels.net/admin")
 
-    pwd = browser.find_element_by_id("pwd")
-    pwd.send_keys("12345")
+    user = browser.find_element_by_css_selector(
+        ".input-outlined > input[name='email']")
+    user.send_keys("admin@phptravels.com")
 
-    browser.find_element_by_xpath("//input[@value='Login']").click()
-    
+    pwd = browser.find_element_by_css_selector(
+        ".input-outlined > input[name='password']")
+    pwd.send_keys("demoadmin")
+
+    browser.find_element_by_css_selector("button[type=submit]").click()
+
+    wait.until(
+        lambda browser: browser.find_element_by_id("logout"))
+
     time.sleep(5)
     browser.quit()
 
+
 if(__name__ == "__main__"):
-    main()
+    python_selenium_test()
