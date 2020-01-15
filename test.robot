@@ -19,7 +19,7 @@ Browser Test Using Robot Framework
     Robot Browser                    https://www.phptravels.net/admin                ${BROWSER}
 
 Browser Test Using Python
-    Python Selenium Test
+    Python Selenium Test             ${BROWSER}
 
 *** Keywords ***
 
